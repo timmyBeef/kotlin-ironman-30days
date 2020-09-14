@@ -1,5 +1,8 @@
 package day5
 
+/*
+    day 5: function
+ */
 fun main() {
     callSum()
 
