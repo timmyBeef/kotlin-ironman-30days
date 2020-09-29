@@ -68,6 +68,9 @@ fun main() {
         println("idx: ${d.index}, value: ${d.value}")
     }
 
+//    dataAry.forEach {  }
+//    dataAry.forEachIndexed()
+
     // multi dimensional array
     val twoDAry = arrayOf(
             arrayOf("0,0", "0,1", "0,2"),

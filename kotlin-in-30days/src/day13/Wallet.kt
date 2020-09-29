@@ -17,6 +17,16 @@ open class Wallet(val id: Long, _balance: BigDecimal, _createTime: LocalDateTime
             field = value
         }
 
+    var createTime = _createTime
+        get() {
+            println("取得 createTime: $field")
+            return field
+        }
+        private set(value) {
+            println("更新 createTime: $value")
+            field = value
+        }
+
     private var balanceUpdateTime: LocalDateTime? = null
         private set(value) {
             println("更新 balance 時間: $value")

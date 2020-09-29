@@ -100,6 +100,16 @@ fun main() {
     // 一個空的 ArrayList
     var result = ArrayList<Int>()
     var result2 = LinkedList<Int>()
+
+    // sort
+    println("sortedDescending...")
+    println(listOf("b", "a", "c").sortedDescending()) // [c, b, a]  降序
+
+    println("sortedBy...")
+    println(listOf("b", "a", "c").sortedBy { it }) // [a, b, c]  升序
+
+    println("distinct...")
+    println(listOf("name1", "name2", "name1").distinct())
 }
 
 fun returnEmpty(): List<String> {
