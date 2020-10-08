@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    ## db 資訊
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 1qaz2wsx
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    ## console 中 顯示 jpa 產生的 sql
+    show-sql: true
+    ## generate-ddl 是否透過 entity 產生 db schema
+    generate-ddl: false
+    ## Hibernate ddl auto (create, create-drop, update), 是否隨著 entity 更新，update 保留 data
+    hibernate:
+      ddl-auto: update
+  ## 啟動 http://localhost:8080/h2-console  h2 db 管理介面
+  h2:
+    console:
+      enabled: true
