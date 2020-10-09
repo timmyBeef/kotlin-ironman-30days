@@ -1,1 +1,2 @@
-INSERT INTO user(password, username, email) VALUES('1234', 'tim', 'tim@gmail.com');
+INSERT INTO authority(name) VALUES('ROLE_ADMIN');
+INSERT INTO authority(name) VALUES('ROLE_USER');

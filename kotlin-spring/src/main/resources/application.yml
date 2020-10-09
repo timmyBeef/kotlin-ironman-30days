@@ -18,3 +18,8 @@ spring:
   h2:
     console:
       enabled: true
+demo:
+  jwt:
+    base64Secret: NDM3NjU1ZWM4NjJhNmIzOWI4MzVlM2UxZWYwMzlhOGYwZGY4MTE0YjgzOTBmMTQzMmQzMDllMDMyOTkzOGFkNGRjMDU4YmQzNGQwOGEyZDMzMTg2ZWYwYjdhYjU0MTFhOGViMTM0ZGJmYWJmN2ViMjg5YTYzOGJhMDVjM2Q4ZGE=
+    expiresSecond: 172800
+
