@@ -43,7 +43,7 @@ class SecurityConfiguration(
                 .csrf() // 因為是做 token 驗證，不用開啟避免 csrf
                 .disable()
                 .headers()
-                .frameOptions() // frameOptions 關掉，不然像是開啟 h2-console 有用到 frame 會爛掉
+                .frameOptions() // 防止 IFrame 式 Clickjacking 攻擊，上方已經許可 "/h2-console/**"(有用到 iframe) 所以可以正常顯示
                 .deny()
                 .and()
                 .sessionManagement()
