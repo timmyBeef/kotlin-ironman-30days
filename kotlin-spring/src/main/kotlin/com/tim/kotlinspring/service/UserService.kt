@@ -19,6 +19,9 @@ class UserService(private val userRepository: UserRepository,
 ) : Logging {
 
     fun registerUser(user: UserDto, password: String): User {
+        if (this.isUserExists(user.username)) {
+            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "this user exists!")
+        }
         log().info("do registerUser: $user")
         val encryptedPassword = passwordEncoder.encode(password)
         val authorities = mutableSetOf<Authority>()
@@ -44,6 +47,8 @@ class UserService(private val userRepository: UserRepository,
     fun findByUsername(username: String): User = userRepository.findByUsername(username).orElseThrow {
         throw ResponseStatusException(HttpStatus.NOT_FOUND, "this user doesn't exist")
     }
+
+    fun isUserExists(username: String): Boolean = userRepository.findByUsername(username).isPresent
 
     fun save(user: User): User {
         val id = user.id ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "user id is null!")
