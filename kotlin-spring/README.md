@@ -3,6 +3,12 @@
 ## you also can reference to these articles
 https://ithelp.ithome.com.tw/articles/10250038
 
+## Tech Stack:
+* SpringBoot
+* Spring Data JPA
+* Spring Security + JWT token
+* H2 in-memory DB
+* RESTful API
 
 ## how to register an account
 ### api/user/register example:
